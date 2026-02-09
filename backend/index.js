@@ -8,8 +8,6 @@ import cors from "cors";
 import jwt from "jsonwebtoken";
 
 // Local imports
-import config from "./config.json" with { type: "json" };
-
 import authRoutes from "./routes/authRoutes.js";
 import noteRoutes from "./routes/noteRoutes.js";
 
@@ -21,7 +19,7 @@ app.use(express.json()); // Ye line zaroori hai req.body ke liye
 app.use(cors({ origin: "*" }));
 
 
-mongoose.connect(config.connectionString).then(() => {
+mongoose.connect(process.env.MONGODB_URI).then(() => {
     console.log("connected to mongodb successfully vro !!");
 }).catch((err) => {
     console.error("error connecting to mongodb: ", err);
