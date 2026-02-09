@@ -51,7 +51,7 @@ function App() {
     <Routes>
      <Route path="/" element={<Start/>} />
      <Route path='/dashboard' element={<Home showToastMsgHandler={showToastMsgHandler} showToastMsg={showToastMsg} CloseToastHandler={closeToastHandler}/>} />
-     <Route path='/signUp' element={<SignUP showToastMsgHandler={showToastMsgHandler}/>} />
+     <Route path='/signup' element={<SignUP showToastMsgHandler={showToastMsgHandler}/>} />
      <Route path='/login' element={<Login showToastMsgHandler={showToastMsgHandler}/>} />
      <Route path='/forget-password' element={<ForgetPassword />} />
      <Route path='/reset-password' element={<ResetPassword  showToastMsgHandler={showToastMsgHandler}/>}/>
